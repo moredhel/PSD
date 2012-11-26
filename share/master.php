@@ -17,7 +17,8 @@ if($page_content == null)
 else
 {
 	#insert try catch which redirects to 404 if caught
-	require($page_content);
+	#There's a hardcoded link to ../content/
+	require("../content/../content../content/$page_content");
 }
 #insert footer for the master page here!
 require("footer.php");
