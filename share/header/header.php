@@ -14,6 +14,7 @@
 <div name='header_loginBox' align='right'>
 <?php
 //this php block either displays the login area or a welcome user message, with possible links to setting, messages + notifications
+#add javascript to check for empty fields!!
 if(isset($_SESSION['username']))
 {
 	//a user is logged in
