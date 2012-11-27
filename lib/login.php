@@ -4,6 +4,7 @@
 	if(isset($_POST['click']))
 	{
 		echo "Welcome " , $_POST['username'];
+		//do database and user auth stuff here
 	}
 	else
 	{
