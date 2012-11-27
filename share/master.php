@@ -18,7 +18,7 @@ else
 {
 	#insert try catch which redirects to 404 if caught
 	#There's a hardcoded link to ../content/
-	require("../content/../content../content/$page_content");
+	require("../content/$page_content");
 }
 #insert footer for the master page here!
 require("footer.php");
