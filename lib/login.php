@@ -7,6 +7,6 @@
 	}
 	else
 	{
-		echo 'Go Away';
+		header( 'Location: ../share/home.php' ) ;
 	}
 ?>
