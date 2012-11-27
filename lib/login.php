@@ -1,5 +1,3 @@
-<html>
-	<?php
-		echo "Hello " , $_GET['username']
-	?>
-</html>
+<?php
+	//remember to add anti sql-injection code!!!	
+?>
