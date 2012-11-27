@@ -2,7 +2,7 @@
 <html>
 <head>
 <!--Insert css linkage here -->
-<title><?php echo $title; ?></title><!--The title is loaded in Dynamically-->
+<title><?php echo $title; //The title is loaded in Dynamically ?></title>
 <?php require("../scripts/global.js");//should probably use js include, less infor to download to each page load ?>
 </head>
 <?php
