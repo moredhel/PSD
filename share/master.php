@@ -9,7 +9,7 @@
 <div name='header'>
 <?php
 #This is an inclusion of the header webpage within the Master page
-require("header.php");
+require("header/header.php");
 ?>
 </div>
 <div name='body'>
@@ -17,7 +17,7 @@ require("header.php");
 #This is the Master Page,
 #all other pages are loaded through this page
 #This inserts the contents of the page into the master Page
-if($page_content == null)
+if(!isset($page_content))
 {
 	include("404.php");
 }
@@ -32,7 +32,7 @@ else
 <div name='footer'>
 <?php
 #insert footer for the master page here!
-require("footer.php");
+require("footer/footer.php");
 ?>
 </div>
 </html>
