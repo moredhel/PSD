@@ -1,5 +1,5 @@
 <!--IMPORTANT - Create divs to separate out data-->
-<?php #include a session_start method at the top to make use of global variables! ?>
+<?php session_start();#include a session_start method at the top to make use of global variables! ?>
 <html>
 <head>
 <!--Insert css linkage here -->

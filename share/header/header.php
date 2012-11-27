@@ -14,9 +14,10 @@
 <div name='header_loginBox' align='right'>
 <?php
 //this php block either displays the login area or a welcome user message, with possible links to setting, messages + notifications
-if(isset($_SESSION['userid']))
+if(isset($_SESSION['username']))
 {
 	//a user is logged in
+	echo "Welcome ", $_SESSION['username'] , "<form action='../lib/logout.php' method='POST'><input type='hidden' name='click' /><input type='submit' value='logout' /></form>";
 }
 else
 {

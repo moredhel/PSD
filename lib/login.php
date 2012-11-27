@@ -1,9 +1,11 @@
 <?php
+	session_start();
 	//remember to add anti sql-injection code!!!	
 	//check if form has been submitted or someone has direct url'd here
 	if(isset($_POST['click']))
 	{
-		echo "Welcome " , $_POST['username'];
+		$_SESSION['username'] = $_POST['username'];
+        #header( 'Location: ../share/home.php' ) ;		
 		//do database and user auth stuff here
 	}
 	else
