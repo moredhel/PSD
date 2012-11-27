@@ -4,9 +4,9 @@
 	<table>
 		<tr> 
 			<!--Menu could be done more awesomely-->
-			<td>Home</td>
-			<td>Stats</td>
-			<td>About</td>
+			<td><a href='home.php'>Home</a></td>
+			<td><a href='stats.php'>Stats</a></td>
+			<td><a href='about.php'>About</a></td>
 		</tr>
 	</table>
 </div>
