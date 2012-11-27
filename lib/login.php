@@ -1,5 +1,6 @@
 <?php
 	session_start();
+	#include database class
 	$suffix = "?";
 	//remember to add anti sql-injection code!!!	
 	//check if form has been submitted or someone has direct url'd here
@@ -8,8 +9,7 @@
 		$_SESSION['username'] = $_POST['username'];
         #header( 'Location: ../share/home.php' ) ;		
 		//do database and user auth stuff here
-		echo strlen($_SESSION['username']);
 	}
 	else{$suffix = "?error=0";}
-		header( "Location: ../share/home.php$suffix" ) ;
+	#	header( "Location: ../share/home.php$suffix" ) ;
 ?>
