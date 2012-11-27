@@ -12,6 +12,13 @@
 require("header/header.php");
 ?>
 </div>
+<?php
+#error area, this will only show if an error occurs, optionally a post instead of get
+if(isset($_GET['error']))
+{
+	include('misc/error.php');
+}
+?>
 <div name='body'>
 <?php
 #This is the Master Page,
@@ -19,7 +26,7 @@ require("header/header.php");
 #This inserts the contents of the page into the master Page
 if(!isset($page_content))
 {
-	include("404.php");
+	include("misc/404.php");
 }
 else
 {

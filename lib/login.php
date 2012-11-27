@@ -9,6 +9,6 @@
         #header( 'Location: ../share/home.php' ) ;		
 		//do database and user auth stuff here
 	}
-	else{$suffix = "?error=login";}
+	else{$suffix = "?error=0";}
 		header( "Location: ../share/home.php$suffix" ) ;
 ?>
