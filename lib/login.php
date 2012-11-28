@@ -6,9 +6,13 @@
 	//remember to add anti sql-injection code!!!	
 	//check if form has been submitted or someone has direct url'd here
 	$db = new db();
-	$dataset[] = $db->Request("SELECT username, password FROM psd_users");
-	echo $dataset[0]['username'];
-	echo $dataset[1]['username'];
+	$dataset = $db->Request("SELECT username, password FROM psd_users");
+	for($i = 0; $i < count($dataset); $i++)
+	{
+		$row = $dataset[$i];
+		echo "</br>";
+		echo $row['username'] , ":" , $row['password'];
+	} 
 	if(isset($_POST['click']) && strlen($_POST['username']) > 0 && strlen($_POST['password']) > 0)
 	{
 		$_SESSION['username'] = $_POST['username'];
