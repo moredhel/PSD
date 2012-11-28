@@ -23,6 +23,10 @@ class db
 		#$dataset = mysql_fetch_array($query);
 		#insert incrementing array here which becomes a 2d array of all results from the database,
 		#this is then returned to the calling function as a 2d arrayt
+		while($dataset = mysql_fetch_array($query))
+		{
+			
+		}	
 	}
 }
 ?>
