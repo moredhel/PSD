@@ -1,12 +1,13 @@
 <?php
 	session_start();
 	#include database class
-	require("../classes/db_connect.php");
+	require("../classes/db_connect.php");#connection to database
+	require("../classes/salt.php");
 	$suffix = "?";
 	//remember to add anti sql-injection code!!!	
 	//check if form has been submitted or someone has direct url'd here
 	$db = new db();
-	$dataset = $db->Request("SELECT username, password FROM psd_users");
+	$dataset = $db->Request("SELECT username, password FROM psd_users WHERE username LIKE 'Hamish'");
 	for($i = 0; $i < count($dataset); $i++)
 	{
 		$row = $dataset[$i];
