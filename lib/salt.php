@@ -7,5 +7,4 @@ function encrypt($pwd)
 #as we do not need to decrypt it needn't be too fast, can take up to 1 second, maybe more
 return md5($pwd);
 }
-echo encrypt('password');
 ?>
