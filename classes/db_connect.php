@@ -31,5 +31,13 @@ class db
 #		var_dump($return_arr);
 		return $return_arr;
 	}
+	public function Ins($sql)
+	{
+		$this->Connect();
+		
+		$query = mysql_query($sql);
+
+		return $query;
+	}
 }
 ?>
