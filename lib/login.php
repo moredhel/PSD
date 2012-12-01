@@ -11,6 +11,7 @@
 		$db = new db();
 		$dataset = $db->Request("SELECT username, password FROM psd_users WHERE username LIKE '" . $_POST['username'] . "'");
 		$row = $dataset[0];
+#		echo $row['password'] . ":" . encrypt($_POST['password']);
 		if($row['password'] == encrypt($_POST['password']))
 		{
 			$_SESSION['username'] = $_POST['username'];
