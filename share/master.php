@@ -2,7 +2,7 @@
 <?php session_start();#include a session_start method at the top to make use of global variables! ?>
 <html>
 <head>
-<!--Insert css linkage here -->
+<link rel="stylesheet" type="text/css" href="css/master.css" media="screen" />
 <title><?php if(isset($title))echo $title; else echo "Error:404"; //The title is loaded in Dynamically ?></title>
 <?php require("../scripts/global.js");//should probably use js include, less infor to download to each page load ?>
 </head>
