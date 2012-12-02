@@ -21,6 +21,9 @@ if(isset($_GET['error']))
 }
 ?>
 </div>
+<div id='sidebar'>
+<?php require('sidebar/sidebar.php');?>
+</div>
 <div id='body'>
 <?php
 #This is the Master Page,

@@ -1,10 +1,47 @@
 p
 {
 	color:black;
-	text-align:center;
 }
 div#error
 {
 	background-color:red;
 	text-align:left;
+	font-weight:bold;
+}
+div#header
+{
+	width:100%;
+}
+div#header_loginBox
+{
+	float:right;
+}
+div#header_logo
+{
+	background:blue;
+}
+div#header_menu
+{
+	float:left;
+}
+table#header
+{
+	width:100%;
+}
+
+
+div#body
+{
+	padding-left:10%;
+	padding-right:2%;
+}
+
+
+div#sidebar
+{
+    width: 10%;
+    height: 80%;
+    position: fixed;
+    bottom:0px;
+    left:0px;
 }

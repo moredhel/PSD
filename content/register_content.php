@@ -1,4 +1,3 @@
-<center><!--replace this with css when css exists-->
 
 <form action="../lib/register.php" method="POST">
 	<table>
@@ -10,5 +9,3 @@
 
 	</table>
 </form>
-
-</center>

@@ -9,7 +9,7 @@
 	{
 		#successful validation of user input!
 		$db = new db();
-		$dataset = $db->Request("SELECT username FROM psd_users WHERE username = '" .($_POST['username'])."'");
+		$dataset = $db->Request("SELECT username FROM psd_users WHERE username LIKE '" .($_POST['username'])."'");
 		#compare usernames case INsensitive!
 		if(count($dataset) == 0)
 		{
