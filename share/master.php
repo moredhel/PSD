@@ -6,12 +6,13 @@
 <title><?php if(isset($title))echo $title; else echo "Error:404"; //The title is loaded in Dynamically ?></title>
 <?php require("../scripts/global.js");//should probably use js include, less infor to download to each page load ?>
 </head>
-<div name='header' align='center'>
+<div id='header' >
 <?php
 #This is an inclusion of the header webpage within the Master page
 require("header/header.php");
 ?>
 </div>
+<div id='error'>
 <?php
 #error area, this will only show if an error occurs, optionally a post instead of get
 if(isset($_GET['error']))
@@ -19,7 +20,8 @@ if(isset($_GET['error']))
 	include('misc/error.php');
 }
 ?>
-<div name='body'>
+</div>
+<div id='body'>
 <?php
 #This is the Master Page,
 #all other pages are loaded through this page
@@ -36,7 +38,7 @@ else
 }
 ?>
 </div>
-<div name='footer'>
+<div id='footer'>
 <?php
 #insert footer for the master page here!
 require("footer/footer.php");

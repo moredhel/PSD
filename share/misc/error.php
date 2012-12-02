@@ -1,8 +1,7 @@
 <?php
 #make a long if/else list of possible errors.
 $error = $_GET['error'];
-
-function pr($text){echo "<p><bold>error:".$_GET['error'].",  " . $text . "</bold></p>";}
+function pr($text){echo "<p class='error'>error:".$_GET['error'].",  " . $text . "</p>";}
 if($error == 0)#login error
 {
 	pr("Invalid Username/Password");
@@ -21,3 +20,5 @@ else
 header( 'Location: ../home.php' ) ;
 }
 ?>
+<p name="error">test</p>
+
