@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	if(isset($_SESSION['username'])){echo 'Logged in!!';}#change this to redirect the user back to their homepage
+	if(isset($_SESSION['username']) || $_SESSION['admin'] == 0){header('Location: ../share/home.php');}#change this to redirect the user back to their homepage
 	require("salt.php");
 	require("../classes/db_connect.php");
 	$error = "";
