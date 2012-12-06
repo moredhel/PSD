@@ -1,9 +1,10 @@
 <?php
 	session_start();
-	if(isset($_SESSION['username'])){header('Location: ../share/home.php');}#change this to redirect the user back to their homepage
-	if($_SESSION['admin'] == false){header('Location: ../share/home.php');}
+	if($_SESSION['admin'] == false){header('Location: ../share/home.php?error=3');}
 	require("salt.php");
 	require("../classes/db_connect.php");
+	Register();
+	function Register(){
 	$error = "";
 	#check all values aren't nill
 	if(isset($_POST['click']) && strlen($_POST['username']) > 0 && strlen($_POST['password']) > 0 && !strcmp($_POST['password'], $_POST['confirm']))
@@ -30,4 +31,5 @@
 		$error = "?error=1";
 	}
 	header( "Location: ../share/admin.php". $error);
+	}
 ?>
