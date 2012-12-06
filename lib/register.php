@@ -28,5 +28,5 @@
 	{
 		$error = "?error=1";
 	}
-	header( "Location: ../share/register.php". $error);
+	header( "Location: ../share/admin.php". $error);
 ?>
