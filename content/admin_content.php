@@ -1,3 +1,7 @@
+<?php
+	#checks if user is admin
+#	require("../content/admin/admin_auth.php");
+?>
 <table id-'admin'>
 	<tr>
 <?php
