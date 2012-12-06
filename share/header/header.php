@@ -9,7 +9,7 @@
 <?php
 if($_SESSION['admin'])
 {
-	echo "<td><a href='admin.php>Admin</admin>";
+	echo "\t\t\t<td><a href='admin.php'>Admin</a></td>\n";
 }
 ?>
 		</tr>
