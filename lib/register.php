@@ -1,6 +1,7 @@
 <?php
 	session_start();
-	if($_SESSION['admin'] == false){header('Location: ../share/home.php?error=3');}
+#	if($_SESSION['admin'] == false){header('Location: ../share/home.php?error=3');}
+	require("../content/admin/admin_auth.php");
 	require("salt.php");
 	require("../classes/db_connect.php");
 	Register();
