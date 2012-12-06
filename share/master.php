@@ -1,5 +1,11 @@
 <!--IMPORTANT - Create divs to separate out data-->
-<?php session_start();#include a session_start method at the top to make use of global variables! ?>
+<?php session_start();#include a session_start method at the top to make use of global variables!
+#permissions variables are set here!
+if(!isset($_SESSION['admin']))
+{
+	$_SESSION['admin'] = false;
+}
+ ?>
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="css/master.css" media="screen" />

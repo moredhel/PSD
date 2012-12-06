@@ -6,6 +6,12 @@
 			<td><a href='home.php'>Home</a></td>
 			<td><a href='stats.php'>Stats</a></td>
 			<td><a href='about.php'>About</a></td>
+<?php
+if($_SESSION['admin'])
+{
+	echo "<td><a href='admin.php>Admin</admin>";
+}
+?>
 		</tr>
 	</table>
 </div>

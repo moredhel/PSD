@@ -1,5 +1,7 @@
 <?php
+#insert permissions into db as Boolean, and add session variables for permissions to reduce no. of Db, calls!!
 	session_start();
+	#permission variables are set when a user lands on the page, to 0 and only changed if login is successful!
 	#include database class
 	require("../classes/db_connect.php");#connection to database
 	require("../lib/salt.php");
@@ -14,6 +16,7 @@
 #		echo $row['password'] . ":" . encrypt($_POST['password']);
 		if($row['password'] == encrypt($_POST['password']))
 		{
+			#insert all permission variables here
 			$_SESSION['username'] = $_POST['username'];
 			echo "Success";
 		}
