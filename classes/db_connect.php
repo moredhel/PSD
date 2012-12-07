@@ -5,11 +5,15 @@
 class db
 {
 	private $db_target= "127.0.0.1";
-	private $db_user = "psd";
-	private $db_password = "password";
+	private $db_user = "psd_guest";
+	private $db_password = "guest";
 	private $db_database= "PSD";
-
 	private	function Connect() {
+		if(isset($_SESSION['username']))
+		{
+			$db_user = "psd";
+			$db_password = "password";
+		}
 		mysql_connect($this->db_target,$this->db_user,$this->db_password); 
 		mysql_select_db($this->db_database); 
 

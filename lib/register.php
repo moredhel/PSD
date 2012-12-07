@@ -31,6 +31,6 @@
 	{
 		$error = "?error=1";
 	}
-	header( "Location: ../share/admin.php". $error);
+#	header( "Location: ../share/admin.php". $error);
 	}
 ?>

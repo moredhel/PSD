@@ -20,7 +20,7 @@
 			$_SESSION['userid'] = $row['userid'];
 			$_SESSION['admin'] = $row['admin'];
 			$_SESSION['username'] = $_POST['username'];
-			echo "Success";
+			echo $row['username'];
 		}
 		else{$suffix = "?error=0";}
         #header( 'Location: ../share/home.php' ) ;		
