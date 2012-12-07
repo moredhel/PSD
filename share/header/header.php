@@ -6,7 +6,12 @@
 			<td><a href='home.php'>Home</a></td>
 			<td><a href='stats.php'>Stats</a></td>
 			<td><a href='about.php'>About</a></td>
+			
 <?php
+if(isset($_SESSION['username']))
+{
+	echo "<td><a href='preferences.php'>Preferences</a></td>";
+}
 if($_SESSION['admin'])
 {
 	echo "\t\t\t<td><a href='admin.php'>Admin</a></td>\n";
