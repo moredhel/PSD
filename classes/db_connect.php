@@ -9,11 +9,12 @@ class db
 	private $db_password = "guest";
 	private $db_database= "PSD";
 	private	function Connect() {
-		if(isset($_SESSION['username']))
+		if(isset($_SESSION['userid']))
 		{
-			$db_user = "psd";
-			$db_password = "password";
+			$this->db_user = "psd";
+			$this->db_password = "password";
 		}
+#		echo $this->db_user;
 		mysql_connect($this->db_target,$this->db_user,$this->db_password); 
 		mysql_select_db($this->db_database); 
 

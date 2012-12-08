@@ -14,7 +14,7 @@
 <!--This allows the user to select the Company that they want to join!-->
 	<?php
 		//check if user belongs to a company
-		if($_SESSION['CompanyId'] == 0)
+		if($_SESSION['companyId'] == 1)
 		{
 			require("../classes/db_connect.php");
 			$db = new db();
@@ -26,10 +26,15 @@
 				{
 					$row = $dataset[$i];
 					echo "<form method='POST' action='../lib/selectCompany.php'>";
-					echo "<input type='hidden' name='companyId' value='".$row['CompanyId']."'";
+					echo "<input type='hidden' name='companyId' value='".$row['CompanyId']."' />";
+					echo "<input type='hidden' name='companyName' value='" . $row['CompanyName'] . "' />";
 					echo "<tr>\n\t<td>" . $row['CompanyName'] . "</td>\n\t<td><input type='hidden' name='clicked' /><input type='submit' value='Select'</td>\n</tr>\n";
 					echo "</form>";
 				}
 			echo "</table>";
-	}
+		}
+		else
+		{
+			echo "Welcome Associate of <b>" . $_SESSION['companyName'] . "</b>";
+		}
 	?>
