@@ -23,6 +23,7 @@
 			{
 				$_SESSION['companyName'] = $row['CompanyName'];
 			}
+			else $_SESSION['companyName'] = "";
 			$_SESSION['companyId'] = $row['CompanyId'];
 			$_SESSION['userid'] = $row['userid'];
 			$_SESSION['admin'] = $row['admin'];
