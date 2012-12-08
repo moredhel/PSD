@@ -14,7 +14,7 @@
 <!--This allows the user to select the Company that they want to join!-->
 	<?php
 		//check if user belongs to a company
-		if($_SESSION['CompanyId'] == 0)
+		if($_SESSION['companyId'] == 0)
 		{
 			require("../classes/db_connect.php");
 			$db = new db();
@@ -31,5 +31,9 @@
 					echo "</form>";
 				}
 			echo "</table>";
-	}
+		}
+		else
+		{
+			echo "Welcome Associate of <b>" . $_SESSION['companyName'] . "</b>";
+		}
 	?>
