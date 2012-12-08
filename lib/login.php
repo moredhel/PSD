@@ -19,7 +19,10 @@
 		if($row['password'] == encrypt($_POST['password']))
 		{
 			#insert all permission variables here
-			$_SESSION['companyName'] = $row['CompanyName'];
+			if($row['CompanyId'] != 1)
+			{
+				$_SESSION['companyName'] = $row['CompanyName'];
+			}
 			$_SESSION['companyId'] = $row['CompanyId'];
 			$_SESSION['userid'] = $row['userid'];
 			$_SESSION['admin'] = $row['admin'];

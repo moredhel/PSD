@@ -7,3 +7,5 @@ either put the companies in a table, in their own forms, or put them in a combo 
 If They are put in a table, then I could add links to the Company Homepages!!
 
 add a javascrript confirm action when selecting a Company!
+
+users without a company cannot be logged in

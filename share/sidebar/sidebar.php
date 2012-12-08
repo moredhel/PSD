@@ -5,6 +5,6 @@
 	}
 	else
 	{
-		echo "You aren't Logged in :(";
+		echo "Welcome Guest";
 	}
 ?>
