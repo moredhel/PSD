@@ -1,15 +1,18 @@
 <?php
 	session_start();
-	if(isset($_SESSION['username'])){echo 'Logged in!!';}#change this to redirect the user back to their homepage
+#	if($_SESSION['admin'] == false){header('Location: ../share/home.php?error=3');}
+	require("../content/admin/admin_auth.php");
 	require("salt.php");
 	require("../classes/db_connect.php");
+	Register();
+	function Register(){
 	$error = "";
 	#check all values aren't nill
 	if(isset($_POST['click']) && strlen($_POST['username']) > 0 && strlen($_POST['password']) > 0 && !strcmp($_POST['password'], $_POST['confirm']))
 	{
 		#successful validation of user input!
 		$db = new db();
-		$dataset = $db->Request("SELECT username FROM psd_users WHERE username = '" .($_POST['username'])."'");
+		$dataset = $db->Request("SELECT username FROM psd_users WHERE username LIKE '" .($_POST['username'])."'");
 		#compare usernames case INsensitive!
 		if(count($dataset) == 0)
 		{
@@ -28,5 +31,6 @@
 	{
 		$error = "?error=1";
 	}
-	header( "Location: ../share/register.php". $error);
+#	header( "Location: ../share/admin.php". $error);
+	}
 ?>

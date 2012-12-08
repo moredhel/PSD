@@ -1,0 +1,9 @@
+add a php script which will accept a , delimited csv of all users, their email addresses and any other info deemed necessary to set up a user account. then add to the database with randomly generated passwords, then print out a list of all usernames and their equivalent passwords, (add this into the admin section?)
+
+possible check against inappropriate names before user registration
+
+either put the companies in a table, in their own forms, or put them in a combo box within a single form...
+
+If They are put in a table, then I could add links to the Company Homepages!!
+
+add a javascrript confirm action when selecting a Company!
