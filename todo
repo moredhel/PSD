@@ -1,1 +1,3 @@
 add a php script which will accept a , delimited csv of all users, their email addresses and any other info deemed necessary to set up a user account. then add to the database with randomly generated passwords, then print out a list of all usernames and their equivalent passwords, (add this into the admin section?)
+
+possible check against inappropriate names before user registration

@@ -10,4 +10,27 @@
 	</form>
 </td>
 </tr>
+<tr>
+<td>
+<!--This allows the user to select the Company that they want to join!-->
+	<?php
+		//check if user belongs to a company
+		if($_SESSION['CompanyId'] == 0)
+		{
+			require("../classes/db_connect.php");
+			$db = new db();
+			$sql = "SELECT * FROM  `psd_companies` ORDER BY  `psd_companies`.`CompanyId` ASC ";
+			$dataset = $db->Request($sql);
+			//the user does not belong to a company
+			echo "<table>\n";
+				for($i = 0; $i < count($dataset); $i++)
+				{
+					$row = $dataset[$i];
+					echo "<tr>\n\t<td>" . $row['CompanyId'] . "</td>\n\t<td>" . $row['CompanyName'] . "</td>\n</tr>\n";
+				}
+			echo "</table>";
+	}
+	?>
+</td>
+</tr>
 </table>
