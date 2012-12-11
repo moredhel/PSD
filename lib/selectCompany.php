@@ -9,7 +9,7 @@
 	#echo $sql;
 	$db->Ins($sql);
 #	unset($_SESSION['companyId']);
-	$_SESSION['companyId'] = $_POST['companyId'];
+	$_SESSION['companyid'] = $_POST['companyId'];
 	$_SESSION['companyName'] = $_POST['companyName'];
 	}
 	header("Location: ../share/preferences.php");

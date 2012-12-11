@@ -11,6 +11,7 @@
 if(isset($_SESSION['username']))
 {
 	echo "<td><a href='preferences.php'>Preferences</a></td>";
+	echo "<td><a href='company.php'>Company</a></td>";
 }
 if($_SESSION['admin'])
 {
