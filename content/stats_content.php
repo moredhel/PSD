@@ -1,4 +1,7 @@
 <table id='stats_products'>
+<th><a href='stats.php?order=<?php if(isset($_GET['order']) && $_GET['order'] == 5)echo "0";else echo "5";?>' >Company Name</a></th>
+<th><a href='stats.php?order=<?php if(isset($_GET['order']) && $_GET['order'] == 1)echo "2";else echo "1";?>'>Product</a></th>
+<th><a href='stats.php?order=<?php if(isset($_GET['order']) && $_GET['order'] == 3)echo "4";else echo "3";?>'>Qty</a></th>
 <?php
 	#This is where all the stats for the companies are manipulated
 	require("../classes/db_connect.php");
