@@ -15,7 +15,31 @@
 	{
 		$sql = $sql . " AND c.companyId = " . $_GET['companyid'];
 	}
-	$sql = $sql . " ORDER BY  `c`.`CompanyName` ASC ";
+	#this changes the ordering
+	if(isset($_GET['order']) && $_GET['order'] > 0)
+	{
+		if($_GET['order'] == 1)
+		{
+			$sql = $sql . " ORDER BY `p`.`productName` ASC";
+		}
+		elseif($_GET['order'] == 2)
+		{
+			$sql = $sql . " ORDER BY `p`.`productName` DESC";
+		}
+		elseif($_GET['order'] == 3)
+		{
+			$sql = $sql . " ORDER BY `q`.`quantity` DESC";
+		}
+		elseif($_GET['order'] == 4)
+		{
+			$sql = $sql . " ORDER BY `q`.`quantity` ASC";
+		}
+		elseif($_GET['order'] == 5)
+		{
+			$sql = $sql . " ORDER BY `c`.`CompanyName` DESC";
+		}
+	}
+	else $sql = $sql . " ORDER BY  `c`.`CompanyName` ASC ";
 #	echo $sql;
 	$dataset = $db->Request($sql);
 	
