@@ -11,19 +11,22 @@
 	if(isset($_POST['click']) && strlen($_POST['username']) > 0 && strlen($_POST['password']) > 0)
 	{
 		$db = new db();
-		$sql = "SELECT userid, username, password, u.CompanyId, admin, c.CompanyName FROM psd_users u, psd_companies c WHERE username LIKE '" . $_POST['username'] . "' AND u.CompanyId = c.CompanyId";
-#		echo $sql;
+		$sql = "SELECT userid, username, password, u.CompanyId, admin, c.CompanyName, balance FROM psd_users u, psd_companies c WHERE username LIKE '" . $_POST['username'] . "' AND u.CompanyId = c.CompanyId";
 		$dataset = $db->Request($sql);
 		$row = $dataset[0];
-#		echo $row['password'] . ":" . encrypt($_POST['password']);
 		if($row['password'] == encrypt($_POST['password']))
 		{
 			#insert all permission variables here
 			if($row['CompanyId'] != 1)
 			{
 				$_SESSION['companyName'] = $row['CompanyName'];
+				$_SESSION['balance'] = $row['balance'];
 			}
-			else $_SESSION['companyName'] = "";
+			else
+			{
+ 				$_SESSION['companyName'] = "";
+				$_SESSION['balance'] = "";
+			}
 			$_SESSION['companyid'] = $row['CompanyId'];
 			$_SESSION['userid'] = $row['userid'];
 			$_SESSION['admin'] = $row['admin'];
