@@ -14,7 +14,7 @@
 <!--This allows the user to select the Company that they want to join!-->
 	<?php
 		//check if user belongs to a company
-		if($_SESSION['companyId'] == 1)
+		if($_SESSION['companyid'] == 1)
 		{
 			require("../classes/db_connect.php");
 			$db = new db();
