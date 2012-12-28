@@ -4,8 +4,8 @@ possible check against inappropriate names before user registration
 
 either put the companies in a table, in their own forms, or put them in a combo box within a single form...
 
-If They are put in a table, then I could add links to the Company Homepages!!
+#If They are put in a table, then I could add links to the Company Homepages!!
 
 add a javascrript confirm action when selecting a Company!
 
-users without a company cannot be logged in
+#users without a company cannot be logged in
