@@ -7,7 +7,7 @@
 	require("../classes/db_connect.php");
 	$db = new db();
 	#conditionals, for filtering!
-		$sql = "SELECT c.CompanyName, p.productname, q.quantity FROM psd_companies c, psd_products p, psd_quantities q WHERE c.companyId = q.companyId AND p.productId = q.productId";
+		$sql = "SELECT c.companyId, c.CompanyName, p.productname, q.quantity FROM psd_companies c, psd_products p, psd_quantities q WHERE c.companyId = q.companyId AND p.productId = q.productId";
 	#this if statement modifiess the sql statement to filter by product
 	 if(isset($_GET['productid']) && $_GET['productid'] > 0)
 	{
@@ -50,7 +50,7 @@
 	{
 		$row = $dataset[$i];
 		echo "<tr><td>";
-		echo $row['CompanyName'];
+		echo "<a href='company.php?companyid=" . $row['companyId'] . "'>" . $row['CompanyName'] . "</a>";
 		echo "</td><td>";
 		echo $row['productname'];
 		echo "</td><td>";
