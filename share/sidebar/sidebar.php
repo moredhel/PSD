@@ -1,6 +1,7 @@
 <?php
 	if(isset($_SESSION['companyName']) && strlen($_SESSION['companyName']) > 0)
 	{
+		echo "<b>" . $_SESSION['username'] . "</b><br />";
 		echo "<b>" . $_SESSION['companyName'] . "</b><br />";
 		echo "<b>Balance: " . $_SESSION['balance'] . "</b>";
 	}
