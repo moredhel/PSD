@@ -18,6 +18,10 @@ elseif($error == 3)#user is not admin
 {
 	pr("You have insufficient rights to perform this operation, please contact the Administrator if you think this message has been shown in error");
 }
+elseif($error = 4)#user isn't enrolled in a company
+{
+	pr("You are not part of a company!, please apply to one in the preferences tab");
+}
 else
 {
 #redirect to homepage as it was a direct connection

@@ -15,7 +15,7 @@
 	if(count($dataset) == 0)
 	{
 		echo "Fail";
-		header("Location: company.php ");
+		header("Location: home.php?error=4");
 	}
 ?>
 <table id='company_info'>
