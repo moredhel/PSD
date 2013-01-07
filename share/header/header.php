@@ -10,9 +10,10 @@
 <?php
 if(isset($_SESSION['username']))
 {
-	echo "<td><a href='preferences.php'>Preferences</a></td>";
 	echo "<td><a href='company.php'>Company</a></td>";
+	echo "<td><a href='preferences.php'>Preferences</a></td>";
 }
+
 if($_SESSION['admin'])
 {
 	echo "\t\t\t<td><a href='admin.php'>Admin</a></td>\n";
