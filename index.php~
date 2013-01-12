@@ -1,0 +1,9 @@
+this is a random insert
+<?php
+
+   header( 'Location: ./share/home.php' ) ;
+
+?>
+
+ststsd
+
